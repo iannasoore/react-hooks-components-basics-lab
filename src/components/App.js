@@ -1,30 +1,38 @@
-import React from "react";
+// src/components/App.js
 
-function NavBar() {
+function Navbar() {
   return (
     <nav>
-      <a href="#home">I'm a link!</a>
+      <h1 id="logo">My Portfolio</h1>
     </nav>
   );
 }
 
+// ⚠️ CRITICAL: The Home component MUST return a div with id="home"
 function Home() {
   return (
-    <div id="home">
-      <h1>Home</h1>
+    <div id="home"> 
+      <h2>Home</h2>
     </div>
   );
 }
 
-{/* write an <About> component here */}
-
+// The About component MUST return a div with id="about"
+function About() {
+  return (
+    <div id="about">
+      <h2>About</h2>
+    </div>
+  );
+}
 
 function App() {
+  // All child components must be rendered here
   return (
-    <div>
-      <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
+    <div className="App">
+      <Navbar />
+      <Home /> 
+      <About />
     </div>
   );
 }
